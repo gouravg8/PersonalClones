@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 50%;
+            height: auto;
+        }
+
+        .card-hover {
+            cursor: pointer;
+        }
+
+        h4 {
+            background-color: black;
+            padding: 1em;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+    <title>Linker</title>
+</head>
+
+<body>
+    <div class="container">
+        <h4 class="text-center my-4">Link of my sites</h4>
+        <div id="mainContent" class="row row-cols-1 row-cols-md-4 g-4">
+        </div>
+    </div>
+
+    <script>
+        // function displayData() {
+        const data = [{
+            img: './ToDoS/img/bg.jpg',
+            title: 'Branch clone',
+            des: 'This website is clone version of "Branch furnicher" url: https://www.branchfurniture.ca/ cloned from: https://unbounce.com/landing-page-examples/best-landing-page-examples/',
+            link: 'https://g8branch.netlify.app/'
+        },{
+            img: './ToDoS/img/bg.jpg',
+            title: 'Todo app',
+            des: 'A site which is the clone of Flickr.com',
+            link: 'https://g8todo.netlify.app/'
+        },{
+            img: './modal/img/BG2.jpg',
+            title: 'Modal creation',
+            des: 'A site which shows a little feature like *modal*',
+            link: 'https://g8modal.netlify.app/'
+        }, {
+            img: './flickr/img/benito_druck.jpg',
+            title: 'Flikr clone',
+            des: 'A site which is the clone of Flickr.com',
+            link: 'https://g8flickr.netlify.app/'
+        },
+        {
+            img: './Quote generator/img/bg.jpg',
+            title: 'Quote generator',
+            des: 'A site which able to generate quotes and theire authors name which is given in "JSON" data format.',
+            link: 'https://g8quote.netlify.app/'
+        },
+        ]
+        const cardContainer = document.querySelector('#mainContent')
+
+        data.forEach(item => {
+            // Create card elements
+            const cardDiv = document.createElement('div');
+            cardDiv.classList.add('col', 'mb-2');
+
+            const br = document.createElement('hr');
+
+            const card = document.createElement('div');
+            card.classList.add('card', 'shadow', 'card-hover');
+
+            const img = document.createElement('img');
+            img.src = item.img;
+            img.classList.add('card-img-top');
+            img.alt = '...';
+
+            const cardBody = document.createElement('div');
+            cardBody.classList.add('card-body');
+
+            const title = document.createElement('h5');
+            title.classList.add('card-title');
+            title.textContent = item.title;
+
+            const description = document.createElement('p');
+            description.classList.add('card-text');
+            description.textContent = item.des;
+
+
+            card.addEventListener('click', () => {
+                window.open(item.link, '_blank');
+            });
+
+            // Append elements to the card
+            cardBody.appendChild(title);
+            cardBody.appendChild(description);
+            card.appendChild(img);
+            card.appendChild(cardBody);
+            cardDiv.appendChild(card);
+
+            // Append card to the container
+            cardContainer.appendChild(cardDiv);
+        });
+
+        // }
+        // })
+
+    </script>
+</body>
+
+</html>
