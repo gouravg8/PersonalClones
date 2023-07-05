@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logo {
+  /* flex: 1; */
+  mix-blend-mode: color-dodge;
+  opacity: 1;
+  z-index: 9;
+  width: 80px;
+  height: auto;
+  padding-left: 2rem;
+}
+.hero-img {
+  opacity: 1;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  filter: brightness(70%);
+}
+
+.nav {
+  width: 100%;
+  height: 64px;
+  z-index: 5;
+}
+.nav-items {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+}
+.nav-items p {
+  font-size: 1rem;
+}
+
+.nav-items p,
+i {
+  cursor: pointer;
+  padding-top: 1rem;
+  margin-right: 20px;
+  color: white;
+}
+.push {
+  margin-left: auto;
+  margin-top: 0;
+  padding-top: 6px;
+}
+
+@media screen and (min-width: 501px) {
+  .nothing {
+    width: 100%;
+    height: 64px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    background-color: black;
+  }
+  .hero {
+    margin: 15rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+  }
+  .heroDes {
+    color: white;
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+    line-height: normal;
+    font-weight: normal;
+  }
+  .heroText {
+    color: white;
+    font-size: 3rem;
+  }
+  .go {
+    cursor: pointer;
+    font-size: 1.5rem;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    border: none;
+    font-weight: bolder;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    margin-top: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-items {
+    padding-top: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .nothing {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    background-color: black;
+  }
+  .hero {
+    margin: 10rem auto 50% auto;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+  }
+  .heroText {
+    color: white;
+    font-size: 1.5rem;
+  }
+  .heroDes {
+    display: none;
+    visibility: hidden;
+  }
+  .go {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    border: none;
+    font-weight: bolder;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    /* margin-top: 1rem; */
+    font-size: 1rem;
+  }
+  .signup,
+  #login {
+    display: none;
+  }
+  .mobile{
+    display: none;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-right: 13%; */
+  }
+  .credits {
+    margin-top: 0;
+  }
+}
+
+.credits {
+  text-align: center;
+  font-size: smaller;
+  color: white;
+  line-height: normal;
+  /* margin: 0% auto; */
+}
+
+.details {
+  padding: 1rem 0 1rem 0;
+  margin-bottom: 0px;
+  display: flex;
+  color: white;
+  background-color: black;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

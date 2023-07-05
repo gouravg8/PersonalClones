@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: auto; */
+}
+body,
+html {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+nav {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  /* background-color: red; */
+}
+.navleft > img {
+  width: 10rem;
+}
+.navleft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media screen and (max-width: 500px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+  .navleft p,
+  .navright {
+    display: none;
+    background-color: none;
+  }
+  .navleft img {
+    width: 50%;
+  }
+  .upperPart {
+    flex-direction: column;
+  }
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .shop {
+    margin-bottom: 10px;
+  }
+  .featured {
+    padding: 10px 5px !important;
+    width: 100%;
+    overflow: scroll;
+  }
+  .companies p {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  .pross {
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .lowerPart i {
+    padding: 15px !important;
+  }
+  .pross .icons {
+    width: 80%;
+    text-align: center;
+    font-weight: 900;
+  }
+  .fa-solid {
+    font-size: 2rem !important;
+  }
+  .lowerPart h2 {
+    font-size: 28px !important;
+  }
+  .upperPart {
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 20px !important;
+    /* position: relative; */
+    width: 100% !important;
+  }
+  .upperPartLeft {
+    text-align: center;
+    /* position: absolute; */
+    /* z-index: 1; */
+  }
+  .buildMyOffice {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  .upperPartRight {
+    width: 100%;
+    /* position: relative; */
+  }
+  .upperPartRight img {
+    display: none;
+  }
+}
+.navleft > p {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.navright {
+  font-weight: 600;
+  font-size: 17px;
+  color: aliceblue;
+  background-color: rgb(13, 53, 13);
+  padding: 6px 25px;
+  border-radius: 2px;
+}
+div.maindiv {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: red; */
+}
+.upperPart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0rem;
+  background-color: rgb(230, 230, 230);
+  gap: 125px;
+}
+.upperPart > .upperPartRight {
+  width: 50%;
+  height: 100%;
+}
+.upperPartRight img {
+  float: right;
+  width: auto;
+  height: 40vh;
+  mix-blend-mode: color-burn;
+}
+.upperPart > .upperPartLeft > h2 {
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 34px;
+  font-family: "Frank Ruhl Libre", serif;
+}
+.upperPartLeft li {
+  list-style: none;
+  font-size: 14px;
+  margin-top: 0.6rem;
+}
+.upperPartLeft .buildMyOffice {
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 70%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 17px;
+  color: aliceblue;
+  background-color: rgb(13, 53, 13);
+  padding: 7px 15px;
+  border-radius: 2px;
+}
+.lowerPart h2 {
+  text-align: center;
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 34px;
+  margin: 30px 0;
+}
+.lowerPart i {
+  background-color: antiquewhite;
+  padding: 25px;
+  border-radius: 50%;
+  color: rgb(0, 0, 0);
+}
+.fa-solid {
+  font-size: 4rem;
+}
+.pross {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-inline: 15px;
+}
+.pross .icons {
+  width: 20%;
+  text-align: center;
+  font-weight: 900;
+}
+.iconText {
+  margin-top: 10px;
+}
+.featured {
+  margin-top: 40px;
+  background-color: rgb(13, 53, 13);
+  width: 100%;
+  padding: 20px 10px;
+}
+.featuredText {
+  color: aliceblue;
+  /* padding: 5px; */
+  text-transform: uppercase;
+  text-align: center;
+}
+.companies {
+  font-size: 2rem;
+  font-weight: bold;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* padding: 10px; */
+}
+
+div.imgCard {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* flex-wrap: wrap;
+    overflow-wrap: break-word; */
+}
+.imgCardimg {
+  width: fit-content;
+  height: 14rem;
+  /* height: 20px; */
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  /* align-items: center; */
+  background-color: rgba(13, 53, 13, 0.89);
+  margin-top: 10px;
+}
+.shopH,
+.exploreH,
+.supportH {
+  opacity: 0.5;
+  font-weight: bolder;
+  color: aliceblue;
+}
+.footer p {
+  color: aliceblue;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.footerLogo {
+  opacity: 0.5;
+  width: 150px;
+}
+.companyAddressItems {
+  width: 100px;
+}
