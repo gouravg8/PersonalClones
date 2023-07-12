@@ -30,6 +30,18 @@
             color: white;
             border-radius: 5px;
         }
+
+        .box {
+            display: none;
+            width: 100%;
+        }
+
+        a:hover+.box,
+        .box:hover {
+            display: block;
+            position: relative;
+            z-index: 100;
+        }
     </style>
     <title>Linker</title>
 </head>
@@ -37,23 +49,36 @@
 <body>
     <div class="container">
         <h4 class="text-center my-4">Link of my sites</h4>
-        <div id="mainContent" class="row row-cols-1 row-cols-md-4 g-4">
+        <div id="mainContent" class="row row-cols-1 row-cols-md-4 g-3">
         </div>
-    </div>
 
+        <!-- <a href="https://g8branch.netlify.app">G8 Branch</a>
+        <div class="box">
+            <iframe src="https://g8branch.netlify.app" width="500px" height="500px">
+            </iframe>
+        </div> -->
+
+        
+    </div>
+    <script src="index.js"></script>
     <script>
         // function displayData() {
         const data = [{
-            img: './ToDoS/img/bg.jpg',
-            title: 'Branch clone',
-            des: 'This website is clone version of "Branch furnicher" url: https://www.branchfurniture.ca/ cloned from: https://unbounce.com/landing-page-examples/best-landing-page-examples/',
+            img: './Quote generator/img/buro-office-furniture.jpg',
+            title: 'Gouni',
+            des: 'This website is able to modify the text like UPPERCASE, lowercase, Clear, Copy and have ability to toggle dark and light mode"',
             link: 'https://g8branch.netlify.app/'
-        },{
+        }, {
+            img: './Quote generator/img/buro-office-furniture.jpg',
+            title: 'Branch clone',
+            des: 'This website is clone version of "Branch furnicher"',
+            link: 'https://g8branch.netlify.app/'
+        }, {
             img: './ToDoS/img/bg.jpg',
             title: 'Todo app',
             des: 'A site which is the clone of Flickr.com',
             link: 'https://g8todo.netlify.app/'
-        },{
+        }, {
             img: './modal/img/BG2.jpg',
             title: 'Modal creation',
             des: 'A site which shows a little feature like *modal*',
@@ -74,26 +99,38 @@
         const cardContainer = document.querySelector('#mainContent')
 
         data.forEach(item => {
+            //     <a href="https://g8branch.netlify.app">Wikipedia</a>
+            // <div class="box">
+            //     <iframe src="https://g8branch.netlify.app" width="500px" height="500px">
+            //     </iframe>
+            // </div>
             // Create card elements
             const cardDiv = document.createElement('div');
-            cardDiv.classList.add('col', 'mb-2');
+            cardDiv.classList.add('col', 'mb-1');
 
-            const br = document.createElement('hr');
+            // const br = document.createElement('hr');
 
             const card = document.createElement('div');
-            card.classList.add('card', 'shadow', 'card-hover');
+            card.classList.add('card', 'shadow-sm', 'border-top-0', 'border-start-0','card-hover');
 
-            const img = document.createElement('img');
-            img.src = item.img;
-            img.classList.add('card-img-top');
-            img.alt = '...';
+            // const img = document.createElement('img');
+            // img.src = item.img;
+            // img.classList.add('card-img-top');
+            // img.alt = '...';
 
             const cardBody = document.createElement('div');
             cardBody.classList.add('card-body');
 
+            const link = document.createElement('a')
             const title = document.createElement('h5');
             title.classList.add('card-title');
             title.textContent = item.title;
+            // title.link = 'https://g8branch.netlify.app'
+
+            const ifra = document.createElement('iframe')
+            ifra.classList.add('box')
+            ifra.style.width = '500px'
+            ifra.style.height = '500px'
 
             const description = document.createElement('p');
             description.classList.add('card-text');
@@ -105,9 +142,10 @@
             });
 
             // Append elements to the card
-            cardBody.appendChild(title);
+            cardBody.appendChild(link);
+            link.appendChild(title)
             cardBody.appendChild(description);
-            card.appendChild(img);
+            // card.appendChild(img);
             card.appendChild(cardBody);
             cardDiv.appendChild(card);
 
